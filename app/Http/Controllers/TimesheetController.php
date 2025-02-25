@@ -41,10 +41,11 @@ class TimesheetController extends Controller
     {
         try {
             $validator = Validator::make($request->all(), [
-                'project_id'    => 'required|exists:projects,id',
-                'date'          => 'required|date',
-                'hours'  => 'required|numeric|min:0',
-                'task_name'   => 'nullable|string|max:255',
+                'user_id' => 'required|exists:users,id', // User must exist
+                'project_id' => 'required|exists:projects,id', // Project must exist
+                'task_name' => 'required|string',
+                'date' => 'required|date',
+                'hours' => 'required|numeric',
             ]); 
 
             if ($validator->fails()) {
@@ -52,7 +53,7 @@ class TimesheetController extends Controller
             }
 
             $timesheet = Timesheet::create([
-                'user_id'       => Auth::id(),
+                'user_id'       => Auth::id(),  
                 'project_id'    => $request->project_id,
                 'date'          => $request->date,
                 'hours'         => $request->hours,
@@ -90,10 +91,11 @@ class TimesheetController extends Controller
     {
         try {
             $validator = Validator::make($request->all(), [
-                'project_id'    => 'sometimes|required|exists:projects,id',
-                'date'          => 'sometimes|required|date',
-                'hours'          => 'sometimes|required|numeric|min:0',
-                'task_name'   => 'nullable|string|max:255',
+                'user_id' => 'required|exists:users,id', // User must exist
+                'project_id' => 'required|exists:projects,id', // Project must exist
+                'task_name' => 'required|string',
+                'date' => 'required|date',
+                'hours' => 'required|numeric',
             ]);
 
             if ($validator->fails()) {

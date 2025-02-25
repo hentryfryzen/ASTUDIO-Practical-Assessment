@@ -14,10 +14,13 @@ class User extends Authenticatable {
 
     protected $fillable = ['first_name', 'last_name', 'email', 'password'];
 
-    public function projects() {
-        return $this->belongsToMany(Project::class)->withTimestamps();
+    // public function projects() {
+    //     return $this->belongsToMany(Project::class)->withTimestamps();
+    // }
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class)->using(ProjectUser::class);
     }
-
     public function timesheets() {
         return $this->hasMany(Timesheet::class);
     }

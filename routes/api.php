@@ -19,6 +19,7 @@ Route::middleware('auth:api')->group(function () {
 
     // 📁 Projects CRUD
     Route::apiResource('projects', ProjectController::class);
+    Route::post('projects/{project}/users', [ProjectController::class, 'assignUserToProject']);
     Route::get('projects/filter', [ProjectController::class, 'filter']);
     Route::post('projects/{project}/attributes', [ProjectController::class, 'setAttributes']);
 

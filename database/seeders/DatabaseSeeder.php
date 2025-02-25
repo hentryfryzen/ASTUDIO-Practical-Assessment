@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ProjectSeeder::class,
             AttributeSeeder::class,
+            AttributeValueSeeder::class,
         ]);
         $this->command->info('Database seeded successfully.');
 

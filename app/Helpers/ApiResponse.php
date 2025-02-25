@@ -21,4 +21,14 @@ class ApiResponse
             'data' => $data,
         ], $statusCode);
     }
+
+
+    public static function conflict($message, $data = null)
+    {
+        return response()->json([
+            'statusCode' => 409,
+            'message'    => $message,
+            'data'       => $data,
+        ], 409);
+    }
 }

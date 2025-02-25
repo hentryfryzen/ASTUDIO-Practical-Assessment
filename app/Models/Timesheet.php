@@ -8,11 +8,14 @@ class Timesheet extends Model
 {
     protected $fillable = ['user_id', 'project_id', 'task_name', 'date', 'hours'];
 
-    public function user() {
+        // Timesheet belongs to a single user
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
-
-    public function project() {
-        return $this->belongsTo(Project::class);
-    }
+     // Timesheet belongs to a single project
+     public function project()
+     {
+         return $this->belongsTo(Project::class);
+     }
 }

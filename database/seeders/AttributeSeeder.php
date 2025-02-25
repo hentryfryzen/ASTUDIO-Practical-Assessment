@@ -9,11 +9,8 @@ class AttributeSeeder extends Seeder
 {
     public function run(): void
     {
-        Attribute::insert([
-            ['name' => 'department', 'type' => 'text'],
-            ['name' => 'start_date', 'type' => 'date'],
-            ['name' => 'end_date', 'type' => 'date'],
-            ['name' => 'budget', 'type' => 'number'],
-        ]);
+        Attribute::create(['name' => 'department', 'type' => 'text']);
+        Attribute::create(['name' => 'start_date', 'type' => 'date']);
+        Attribute::create(['name' => 'end_date', 'type' => 'date']);
     }
 }
