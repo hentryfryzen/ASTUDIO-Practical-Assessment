@@ -1,181 +1,126 @@
-# 📖 Timesheet API Documentation
+# Laravel 11 Project Setup Guide
 
-## 📂 Base URL:
+## Introduction
+This guide will walk you through setting up the **Laravel 11 API-only** project using MySQL, installing dependencies, configuring the database, running migrations, and setting up API authentication with Laravel Passport.
+
+---
+
+## Prerequisites
+Before proceeding, ensure you have the following installed:
+- PHP (>= 8.1)
+- Composer
+- MySQL (or any preferred database)
+- Laravel CLI
+
+---
+
+## 1. Environment Setup
+
+### Step 1: Clone the Repository
+Clone the project repository from your source control:
+```sh
+git clone <repository_url>
+cd <project_directory>
 ```
-http://localhost:8000/api
+
+### Step 2: Create the Environment File
+Copy the `.env.example` file to create a new `.env` file:
+```sh
+cp .env.example .env
+```
+
+### Step 3: Update Database Configuration
+Open the `.env` file and update the following database credentials:
+```
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
 ```
 
 ---
 
-## 📝 1. GET - List Timesheets
-🔗 **Endpoint:** `/api/timesheets`
+## 2. Install Project Dependencies
 
-### ✅ **Request:**
-```bash
-curl -X GET "http://localhost:8000/api/timesheets?filters[task_name][value]=Development" \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json"
+Install the PHP dependencies using Composer:
+```sh
+composer install
 ```
-
-### 📦 **Response:**
-- **Status Code:** `200 OK`
-- **Description:** Returns a list of timesheets with applied filters.
 
 ---
 
-## 📝 2. POST - Create Timesheet
-🔗 **Endpoint:** `/api/timesheets`
+## 3. Database Migration and Seeding
 
-### ✅ **Request:**
-```bash
-curl -X POST http://localhost:8000/api/timesheets \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json" \
--d '{
-  "project_id": 1,
-  "date": "2025-02-24",
-  "hours": 8,
-  "task_name": "Feature development"
-}'
+Run the following command to migrate the database and seed it with test data:
+⚠️ **Warning:** This will reset the database and insert seed data.
+```sh
+php artisan migrate:fresh --seed
 ```
-
-### 📦 **Response:**
-- **Status Code:** `201 Created`
-- **Description:** Successfully created a new timesheet.
 
 ---
 
-## 📝 3. GET - Show Timesheet
-🔗 **Endpoint:** `/api/timesheets/{id}`
+## 4. Passport Installation and API Setup
+Laravel Passport is required for API authentication. Follow these steps:
 
-### ✅ **Request:**
-```bash
-curl -X GET http://localhost:8000/api/timesheets/1 \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json"
+### Step 1: Generate Passport Keys
+```sh
+php artisan passport:keys --force
 ```
 
-### 📦 **Response:**
-- **Status Code:** `200 OK`
-- **Description:** Returns details of the specified timesheet.
+### Step 2: Install API with Passport Integration
+```sh
+php artisan install:api --passport
+```
 
 ---
 
-## 📝 4. PUT - Update Timesheet
-🔗 **Endpoint:** `/api/timesheets/{id}`
+## 5. Running the Application
 
-### ✅ **Request:**
-```bash
-curl -X PUT http://localhost:8000/api/timesheets/1 \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json" \
--d '{
-  "hours": 10,
-  "task_name": "Bug fixing"
-}'
+Start the Laravel development server using:
+```sh
+php artisan serve
 ```
 
-### 📦 **Response:**
-- **Status Code:** `200 OK`
-- **Description:** Updates the specified timesheet.
+Your API should now be running at: 
+```
+http://127.0.0.1:8000
+```
 
 ---
 
-## 📝 5. DELETE - Remove Timesheet
-🔗 **Endpoint:** `/api/timesheets/{id}`
+## 6. API Documentation
+Access the API documentation via the following link:
+🔗 [Postman Documentation](https://documenter.getpostman.com/view/23296053/2sAYdeMC7S)
 
-### ✅ **Request:**
-```bash
-curl -X DELETE http://localhost:8000/api/timesheets/1 \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json"
+The Postman collection and database backup are located in the project directory:
 ```
-
-### 📦 **Response:**
-- **Status Code:** `200 OK`
-- **Description:** Successfully deletes the specified timesheet.
+DB & Postman Collection
+```
 
 ---
 
-## 🔒 **Authentication:**
-- All endpoints require Bearer Token authentication.
-- Replace `<your_access_token>` with a valid token.
+## 7. Additional Commands
 
-## 🛡️ **Headers:**
-```json
-{
-  "Authorization": "Bearer <your_access_token>",
-  "Content-Type": "application/json"
-}
+### Cache Clearing (If Needed)
+```sh
+php artisan config:clear
+php artisan cache:clear
+php artisan route:clear
+php artisan view:clear
 ```
 
-## 🚀 **Tips:**
-- Use tools like **Postman** for easy testing.
-- Ensure the server is running at `localhost:8000` before making requests.
-- Replace placeholders like `{id}` with actual resource IDs.
+### Storage Link (For File Uploads)
+```sh
+php artisan storage:link
+```
 
 ---
 
-✅ **Ready to test?** Just copy, paste, and run the commands! 🚀
+## 8. Git Repository
+The project repository is available at:
+🔗 [GitHub Repository](https://github.com/hentryfryzen/ASTUDIO-Practical-Assessment)
 
-🏷️ Attribute API Endpoints
+---
 
-📝 1. GET - List Attributes
+## Conclusion
+Your **Laravel 11 API** project with MySQL should now be up and running. If you encounter issues, double-check your `.env` configurations and ensure all required dependencies are installed. Happy developing! 🚀
 
-🔗 Endpoint: /api/attributes📄 Description: Fetch all attributes.
-
-🖥️ cURL Command:
-
-curl -X GET "http://localhost:8000/api/attributes" \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json"
-
-📝 2. POST - Create Attribute
-
-🔗 Endpoint: /api/attributes📄 Description: Create a new attribute.
-
-🖥️ cURL Command:
-
-curl -X POST http://localhost:8000/api/attributes \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json" \
--d '{
-  "name": "Priority",
-  "type": "select"
-}'
-
-📝 3. GET - Show Attribute
-
-🔗 Endpoint: /api/attributes/{id}📄 Description: Retrieve details of a specific attribute.
-
-🖥️ cURL Command:
-
-curl -X GET http://localhost:8000/api/attributes/1 \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json"
-
-📝 4. PUT - Update Attribute
-
-🔗 Endpoint: /api/attributes/{id}📄 Description: Update an existing attribute.
-
-🖥️ cURL Command:
-
-curl -X PUT http://localhost:8000/api/attributes/1 \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json" \
--d '{
-  "name": "Updated Priority",
-  "type": "text"
-}'
-
-📝 5. DELETE - Remove Attribute
-
-🔗 Endpoint: /api/attributes/{id}📄 Description: Delete an attribute.
-
-🖥️ cURL Command:
-
-curl -X DELETE http://localhost:8000/api/attributes/1 \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/json"
-
-✅ All endpoints require Bearer Token Authentication.✅ Ensure Content-Type: application/json header is included.

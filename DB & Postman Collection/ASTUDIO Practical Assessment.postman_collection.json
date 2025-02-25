@@ -1,0 +1,2772 @@
+{
+	"info": {
+		"_postman_id": "0cd112b8-2560-4070-b8ff-12f59f60c2c4",
+		"name": "ASTUDIO Practical Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23296053"
+	},
+	"item": [
+		{
+			"name": "TimeSheet Apis",
+			"item": [
+				{
+					"name": "Get Timesheets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ4MGUyYy0xMjQwLTQ0MTItYTlkNy03YjBiNDMzM2E4ZDIiLCJqdGkiOiJkZTc1N2M4NmYwYzVhYzczNDJmMmQwYzdmZmFlNGNmYzgzNDNkOTVkMzNjZTI3Mjg4YzdlOGYxOTFiOWUwYWM5OGU5YjIwN2U1MmE1ZWQ0ZCIsImlhdCI6MTc0MDMyNzc3MC4xNTA3MTgsIm5iZiI6MTc0MDMyNzc3MC4xNTA3MiwiZXhwIjoxNzcxODYzNzcwLjE0ODAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.aC8Ovrekt-NQF_75T10VViCKekYYJbRYQLwUrG4pPNpMs-RYZKUhwbKwdQCf23O-fRLHhxBBsq3lkf2Au5cOhHQ8hyRk8Tbr4yRnWhrZJ3IBRnrtRo1R6Fqj-Jc62G3k5MAzPkVv6vY8OFzTAe8XujCZYzeWyeSoeXsO2ACDOim-cCbUbw2CSq1NoYgg0J68vn9qr52Pv_gQ8oLX_kXIg5nbbm2PbU25q7gW0Xgz1jqSP4_opE7vB0Ty6ZO0SwmdKFTlxXrziUxxjwZGcGGq63J2xFx9N4iRrdpeZ-vKQT0AXNt_WayYXKakfzOzQ2QnxrdvzWKtKcJAO4rscRF62rGLZnjb5TkCE5diFKUehIeFUdCTHKASywl8QgQJyAnRQlA13iGsdhCZaLwtaYoeCkXDW2sfuV5gY-k7vED61KwMO8Qfj8Rsy_sKLeDWo85PK7IUmmzMUEEzPd_7rgNcbYvh5V7XmjdQL5f54hOHsPtJBbOXWvy6oq-DeKvB-IvbVyFwigRgFOO7izoPOVzcU90XNxBjy2X8QgSff9-ahjG4fIDgS6B8PAsf--xzYl6kxliaVGAiblyWRMDGP7MaRNDmfJczJ97BTIiy-9JOfA7jzwH0V_Vzl7daPuFasZhVFh6CV4BeSO2pUM9zMlIs92ngPznP8XEzKMgRKU-nsug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YOUR_ACCESS_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/timesheets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/timesheets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"timesheets"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 10:49:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Timesheets fetched\",\n    \"data\": {\n        \"timesheets\": [\n            {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"project_id\": 1,\n                \"task_name\": \"Feature Development\",\n                \"date\": \"2024-02-23\",\n                \"hours\": \"8.00\",\n                \"created_at\": \"2025-02-25T10:44:42.000000Z\",\n                \"updated_at\": \"2025-02-25T10:44:42.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"first_name\": \"Hentry\",\n                    \"last_name\": \"Fryzen\",\n                    \"email\": \"hentryfryzen@example.com\",\n                    \"password\": \"$2y$12$dygYlGBxex1EF90ivt6T8OGWmJw18ewq2G/Z0ytW60h2n/mGWRuO.\",\n                    \"remember_token\": null,\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                \"project\": {\n                    \"id\": 1,\n                    \"name\": \"ProjectA\",\n                    \"status\": \"in_progress\",\n                    \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                    \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                    \"attribute_values\": [\n                        {\n                            \"id\": 1,\n                            \"attribute_id\": 1,\n                            \"entity_id\": 1,\n                            \"value\": \"IT\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"attribute\": {\n                                \"id\": 1,\n                                \"name\": \"department\",\n                                \"type\": \"text\",\n                                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                                \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                            }\n                        },\n                        {\n                            \"id\": 2,\n                            \"attribute_id\": 2,\n                            \"entity_id\": 1,\n                            \"value\": \"2024-01-01\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"attribute\": {\n                                \"id\": 2,\n                                \"name\": \"start_date\",\n                                \"type\": \"date\",\n                                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                                \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                            }\n                        },\n                        {\n                            \"id\": 3,\n                            \"attribute_id\": 3,\n                            \"entity_id\": 1,\n                            \"value\": \"2024-12-31\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"attribute\": {\n                                \"id\": 3,\n                                \"name\": \"end_date\",\n                                \"type\": \"date\",\n                                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                                \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                            }\n                        }\n                    ]\n                }\n            },\n            {\n                \"id\": 2,\n                \"user_id\": 1,\n                \"project_id\": 1,\n                \"task_name\": \"Feature Development\",\n                \"date\": \"2024-02-23\",\n                \"hours\": \"8.00\",\n                \"created_at\": \"2025-02-25T10:44:57.000000Z\",\n                \"updated_at\": \"2025-02-25T10:44:57.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"first_name\": \"Hentry\",\n                    \"last_name\": \"Fryzen\",\n                    \"email\": \"hentryfryzen@example.com\",\n                    \"password\": \"$2y$12$dygYlGBxex1EF90ivt6T8OGWmJw18ewq2G/Z0ytW60h2n/mGWRuO.\",\n                    \"remember_token\": null,\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                \"project\": {\n                    \"id\": 1,\n                    \"name\": \"ProjectA\",\n                    \"status\": \"in_progress\",\n                    \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                    \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                    \"attribute_values\": [\n                        {\n                            \"id\": 1,\n                            \"attribute_id\": 1,\n                            \"entity_id\": 1,\n                            \"value\": \"IT\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"attribute\": {\n                                \"id\": 1,\n                                \"name\": \"department\",\n                                \"type\": \"text\",\n                                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                                \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                            }\n                        },\n                        {\n                            \"id\": 2,\n                            \"attribute_id\": 2,\n                            \"entity_id\": 1,\n                            \"value\": \"2024-01-01\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"attribute\": {\n                                \"id\": 2,\n                                \"name\": \"start_date\",\n                                \"type\": \"date\",\n                                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                                \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                            }\n                        },\n                        {\n                            \"id\": 3,\n                            \"attribute_id\": 3,\n                            \"entity_id\": 1,\n                            \"value\": \"2024-12-31\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"attribute\": {\n                                \"id\": 3,\n                                \"name\": \"end_date\",\n                                \"type\": \"date\",\n                                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                                \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                            }\n                        }\n                    ]\n                }\n            },\n            {\n                \"id\": 3,\n                \"user_id\": 1,\n                \"project_id\": 4,\n                \"task_name\": \"Feature Development\",\n                \"date\": \"2024-02-23\",\n                \"hours\": \"8.00\",\n                \"created_at\": \"2025-02-25T10:49:13.000000Z\",\n                \"updated_at\": \"2025-02-25T10:49:13.000000Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"first_name\": \"Hentry\",\n                    \"last_name\": \"Fryzen\",\n                    \"email\": \"hentryfryzen@example.com\",\n                    \"password\": \"$2y$12$dygYlGBxex1EF90ivt6T8OGWmJw18ewq2G/Z0ytW60h2n/mGWRuO.\",\n                    \"remember_token\": null,\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                \"project\": {\n                    \"id\": 4,\n                    \"name\": \"GHC A\",\n                    \"status\": \"in_progress\",\n                    \"created_at\": \"2025-02-25T05:54:28.000000Z\",\n                    \"updated_at\": \"2025-02-25T06:07:41.000000Z\",\n                    \"attribute_values\": [\n                        {\n                            \"id\": 8,\n                            \"attribute_id\": 1,\n                            \"entity_id\": 4,\n                            \"value\": \"1900\",\n                            \"created_at\": \"2025-02-25T05:54:28.000000Z\",\n                            \"updated_at\": \"2025-02-25T06:07:41.000000Z\",\n                            \"attribute\": {\n                                \"id\": 1,\n                                \"name\": \"department\",\n                                \"type\": \"text\",\n                                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                                \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                            }\n                        },\n                        {\n                            \"id\": 10,\n                            \"attribute_id\": 4,\n                            \"entity_id\": 4,\n                            \"value\": \"90\",\n                            \"created_at\": \"2025-02-25T06:55:32.000000Z\",\n                            \"updated_at\": \"2025-02-25T07:01:05.000000Z\",\n                            \"attribute\": {\n                                \"id\": 4,\n                                \"name\": \"computer\",\n                                \"type\": \"date\",\n                                \"created_at\": \"2025-02-25T06:21:59.000000Z\",\n                                \"updated_at\": \"2025-02-25T06:21:59.000000Z\"\n                            }\n                        },\n                        {\n                            \"id\": 11,\n                            \"attribute_id\": 2,\n                            \"entity_id\": 4,\n                            \"value\": \"2024-02-01\",\n                            \"created_at\": \"2025-02-25T07:01:21.000000Z\",\n                            \"updated_at\": \"2025-02-25T07:05:06.000000Z\",\n                            \"attribute\": {\n                                \"id\": 2,\n                                \"name\": \"start_date\",\n                                \"type\": \"date\",\n                                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                                \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                            }\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Timesheets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ4MGUyYy0xMjQwLTQ0MTItYTlkNy03YjBiNDMzM2E4ZDIiLCJqdGkiOiJkZTc1N2M4NmYwYzVhYzczNDJmMmQwYzdmZmFlNGNmYzgzNDNkOTVkMzNjZTI3Mjg4YzdlOGYxOTFiOWUwYWM5OGU5YjIwN2U1MmE1ZWQ0ZCIsImlhdCI6MTc0MDMyNzc3MC4xNTA3MTgsIm5iZiI6MTc0MDMyNzc3MC4xNTA3MiwiZXhwIjoxNzcxODYzNzcwLjE0ODAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.aC8Ovrekt-NQF_75T10VViCKekYYJbRYQLwUrG4pPNpMs-RYZKUhwbKwdQCf23O-fRLHhxBBsq3lkf2Au5cOhHQ8hyRk8Tbr4yRnWhrZJ3IBRnrtRo1R6Fqj-Jc62G3k5MAzPkVv6vY8OFzTAe8XujCZYzeWyeSoeXsO2ACDOim-cCbUbw2CSq1NoYgg0J68vn9qr52Pv_gQ8oLX_kXIg5nbbm2PbU25q7gW0Xgz1jqSP4_opE7vB0Ty6ZO0SwmdKFTlxXrziUxxjwZGcGGq63J2xFx9N4iRrdpeZ-vKQT0AXNt_WayYXKakfzOzQ2QnxrdvzWKtKcJAO4rscRF62rGLZnjb5TkCE5diFKUehIeFUdCTHKASywl8QgQJyAnRQlA13iGsdhCZaLwtaYoeCkXDW2sfuV5gY-k7vED61KwMO8Qfj8Rsy_sKLeDWo85PK7IUmmzMUEEzPd_7rgNcbYvh5V7XmjdQL5f54hOHsPtJBbOXWvy6oq-DeKvB-IvbVyFwigRgFOO7izoPOVzcU90XNxBjy2X8QgSff9-ahjG4fIDgS6B8PAsf--xzYl6kxliaVGAiblyWRMDGP7MaRNDmfJczJ97BTIiy-9JOfA7jzwH0V_Vzl7daPuFasZhVFh6CV4BeSO2pUM9zMlIs92ngPznP8XEzKMgRKU-nsug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YOUR_ACCESS_TOKEN"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\": 1,\n  \"project_id\": 1,\n  \"task_name\": \"Feature Development\",\n  \"date\": \"2024-02-23\",\n  \"hours\": 8\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/timesheets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": 1,\n  \"project_id\": 1,\n  \"task_name\": \"Feature Development\",\n  \"date\": \"2024-02-23\",\n  \"hours\": 8\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/timesheets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"timesheets"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 18:05:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Timesheet created successfully.\",\n    \"data\": {\n        \"timesheet\": {\n            \"user_id\": 3,\n            \"project_id\": 1,\n            \"date\": \"2024-02-23\",\n            \"hours\": 8,\n            \"task_name\": \"Feature Development\",\n            \"updated_at\": \"2025-02-23T18:05:03.000000Z\",\n            \"created_at\": \"2025-02-23T18:05:03.000000Z\",\n            \"id\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get TimeSheet By ID ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ4MGUyYy0xMjQwLTQ0MTItYTlkNy03YjBiNDMzM2E4ZDIiLCJqdGkiOiJkZTc1N2M4NmYwYzVhYzczNDJmMmQwYzdmZmFlNGNmYzgzNDNkOTVkMzNjZTI3Mjg4YzdlOGYxOTFiOWUwYWM5OGU5YjIwN2U1MmE1ZWQ0ZCIsImlhdCI6MTc0MDMyNzc3MC4xNTA3MTgsIm5iZiI6MTc0MDMyNzc3MC4xNTA3MiwiZXhwIjoxNzcxODYzNzcwLjE0ODAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.aC8Ovrekt-NQF_75T10VViCKekYYJbRYQLwUrG4pPNpMs-RYZKUhwbKwdQCf23O-fRLHhxBBsq3lkf2Au5cOhHQ8hyRk8Tbr4yRnWhrZJ3IBRnrtRo1R6Fqj-Jc62G3k5MAzPkVv6vY8OFzTAe8XujCZYzeWyeSoeXsO2ACDOim-cCbUbw2CSq1NoYgg0J68vn9qr52Pv_gQ8oLX_kXIg5nbbm2PbU25q7gW0Xgz1jqSP4_opE7vB0Ty6ZO0SwmdKFTlxXrziUxxjwZGcGGq63J2xFx9N4iRrdpeZ-vKQT0AXNt_WayYXKakfzOzQ2QnxrdvzWKtKcJAO4rscRF62rGLZnjb5TkCE5diFKUehIeFUdCTHKASywl8QgQJyAnRQlA13iGsdhCZaLwtaYoeCkXDW2sfuV5gY-k7vED61KwMO8Qfj8Rsy_sKLeDWo85PK7IUmmzMUEEzPd_7rgNcbYvh5V7XmjdQL5f54hOHsPtJBbOXWvy6oq-DeKvB-IvbVyFwigRgFOO7izoPOVzcU90XNxBjy2X8QgSff9-ahjG4fIDgS6B8PAsf--xzYl6kxliaVGAiblyWRMDGP7MaRNDmfJczJ97BTIiy-9JOfA7jzwH0V_Vzl7daPuFasZhVFh6CV4BeSO2pUM9zMlIs92ngPznP8XEzKMgRKU-nsug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YOUR_ACCESS_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/timesheets/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/timesheets/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"timesheets",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 18:08:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Timesheet retrieved successfully.\",\n    \"data\": {\n        \"timesheet\": {\n            \"id\": 1,\n            \"user_id\": 3,\n            \"project_id\": 1,\n            \"task_name\": \"Feature Development\",\n            \"date\": \"2024-02-23\",\n            \"hours\": \"8.00\",\n            \"created_at\": \"2025-02-23T18:05:03.000000Z\",\n            \"updated_at\": \"2025-02-23T18:05:03.000000Z\",\n            \"user\": {\n                \"id\": 3,\n                \"first_name\": \"Hentry\",\n                \"last_name\": \"Fryzen\",\n                \"email\": \"hentryfryzen@example.com\",\n                \"password\": \"$2y$12$SBeb56dDJ6CQvMg7bHqh..UQ50z.3z2o6s.adHAbFRFHccHQKaH7u\",\n                \"remember_token\": null,\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"project\": {\n                \"id\": 1,\n                \"name\": \"Project A Updated\",\n                \"status\": \"completed\",\n                \"created_at\": null,\n                \"updated_at\": \"2025-02-23T17:54:36.000000Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Time Sheet ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5OGQ4ZC02NTUxLTRkNjktOWE2Mi0yZDRmYjU5YTc0MWYiLCJqdGkiOiIwNjA4MDljNGI1YmFkNTMyMzg2YTA0NDM2YWIzZTdkMzBlYzEyZTI0OTU3OGY4NzI5NDkxMzljY2IwZTg1MWNiM2FjYTY0MjgyMTUwOTkwZSIsImlhdCI6MTc0MDM4NzQ1Ny4zOTA2NiwibmJmIjoxNzQwMzg3NDU3LjM5MDY2MSwiZXhwIjoxNzcxOTIzNDU3LjM4OTUxNywic3ViIjoiMSIsInNjb3BlcyI6W119.Q9ilBqr1QXR7qIki1v-Q9rt3zmCEDZ7VlQqkMRViw-LO0vSMzhPv6m8asFbujZYfNqXPLM1KQL09_xYmMa3zA7F8EA5P4lYUa1Yq5dGqIqpkX3zWhI3JVzaPjXD-4_jYon3ZJ5ImDnVvwmPdEk6C6-wOtUivL5XZVOgoW5vBN2xGdnSkEtNk_YT4Ortsqyd-q9v3t3rK-RNU6hoBwVlQAeX3u1o6W7l48vEQkFxKL7jgID3IL3OhvtZAbG4SQiqbNw-wD30_hk_OaGzQQqcExjzReD2oDDm68sHoZFfW9J19trpYgTdlFe4KHl8Z8WLLWdzAv636eAQfn7AKrfHf-kKTAevFKjpdmov1XwcAOaXaQ3cgd8sdVfNJ8r2B_wEXDK44zGFoNMUtWpVj3WeBhbrW8xRL3QZRXOImJLkVwyucLs_KcIPbNSxE7M8YpPJyHCMK7WBrQWEmKyc5LUrsgELLUpbif9BxXTYQZLnc_b8QdbAAlXpQRsD_EjT7fPMKPWFFg_JB8umDeataMd1zOUm_Qba5CiGMwhvGwqDGUA8HW-InOxOJm_XONc4yrjYZFlI4Z04gpuPzGvmTnim9CPcnP5IYn5BO380OMNETvkF9qDVH-fqeZGrZUeMNXVoAC_RLpQKugeGUOsEe4Kdgx3AWfcPQmAMqcCdv_WEGaZE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task_name\": \"Updated Task 1\",\n    \"date\": \"2025-02-25\",\n    \"hours\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/timesheets/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"task_name\": \"Updated Task 1\",\n    \"date\": \"2025-02-25\",\n    \"hours\": 7\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/timesheets/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"timesheets",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 10:08:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Timesheet updated successfully.\",\n    \"data\": {\n        \"timesheet\": {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"project_id\": 1,\n            \"task_name\": \"Updated Task 1\",\n            \"date\": \"2025-02-25\",\n            \"hours\": 7,\n            \"created_at\": \"2025-02-24T09:58:25.000000Z\",\n            \"updated_at\": \"2025-02-24T10:08:34.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users Apis",
+			"item": [
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"admin\",\n  \"last_name\": \"admin\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"first_name\": \"admin\",\n  \"last_name\": \"admin\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 16:31:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"User registered.\",\n    \"data\": {\n        \"user\": {\n            \"first_name\": \"admin\",\n            \"last_name\": \"admin\",\n            \"email\": \"john@example.com\",\n            \"password\": \"$2y$12$/MCnk7dxCnuANoNi4fd4J..gMzeFVUYhdQy4luIYfC72E6CMxy/rS\",\n            \"updated_at\": \"2025-02-23T16:31:53.000000Z\",\n            \"created_at\": \"2025-02-23T16:31:53.000000Z\",\n            \"id\": 4\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ4MGUyYy0xMjQwLTQ0MTItYTlkNy03YjBiNDMzM2E4ZDIiLCJqdGkiOiJkZTc1N2M4NmYwYzVhYzczNDJmMmQwYzdmZmFlNGNmYzgzNDNkOTVkMzNjZTI3Mjg4YzdlOGYxOTFiOWUwYWM5OGU5YjIwN2U1MmE1ZWQ0ZCIsImlhdCI6MTc0MDMyNzc3MC4xNTA3MTgsIm5iZiI6MTc0MDMyNzc3MC4xNTA3MiwiZXhwIjoxNzcxODYzNzcwLjE0ODAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.aC8Ovrekt-NQF_75T10VViCKekYYJbRYQLwUrG4pPNpMs-RYZKUhwbKwdQCf23O-fRLHhxBBsq3lkf2Au5cOhHQ8hyRk8Tbr4yRnWhrZJ3IBRnrtRo1R6Fqj-Jc62G3k5MAzPkVv6vY8OFzTAe8XujCZYzeWyeSoeXsO2ACDOim-cCbUbw2CSq1NoYgg0J68vn9qr52Pv_gQ8oLX_kXIg5nbbm2PbU25q7gW0Xgz1jqSP4_opE7vB0Ty6ZO0SwmdKFTlxXrziUxxjwZGcGGq63J2xFx9N4iRrdpeZ-vKQT0AXNt_WayYXKakfzOzQ2QnxrdvzWKtKcJAO4rscRF62rGLZnjb5TkCE5diFKUehIeFUdCTHKASywl8QgQJyAnRQlA13iGsdhCZaLwtaYoeCkXDW2sfuV5gY-k7vED61KwMO8Qfj8Rsy_sKLeDWo85PK7IUmmzMUEEzPd_7rgNcbYvh5V7XmjdQL5f54hOHsPtJBbOXWvy6oq-DeKvB-IvbVyFwigRgFOO7izoPOVzcU90XNxBjy2X8QgSff9-ahjG4fIDgS6B8PAsf--xzYl6kxliaVGAiblyWRMDGP7MaRNDmfJczJ97BTIiy-9JOfA7jzwH0V_Vzl7daPuFasZhVFh6CV4BeSO2pUM9zMlIs92ngPznP8XEzKMgRKU-nsug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YOUR_ACCESS_TOKEN"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Jane Updated\",\n  \"email\": \"jane.updated@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"first_name\": \"Jane Updated\",\n  \"email\": \"jane.updated@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 17:42:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"User deleted successfully.\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Get user by ID ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ4MGUyYy0xMjQwLTQ0MTItYTlkNy03YjBiNDMzM2E4ZDIiLCJqdGkiOiJkZTc1N2M4NmYwYzVhYzczNDJmMmQwYzdmZmFlNGNmYzgzNDNkOTVkMzNjZTI3Mjg4YzdlOGYxOTFiOWUwYWM5OGU5YjIwN2U1MmE1ZWQ0ZCIsImlhdCI6MTc0MDMyNzc3MC4xNTA3MTgsIm5iZiI6MTc0MDMyNzc3MC4xNTA3MiwiZXhwIjoxNzcxODYzNzcwLjE0ODAyLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.aC8Ovrekt-NQF_75T10VViCKekYYJbRYQLwUrG4pPNpMs-RYZKUhwbKwdQCf23O-fRLHhxBBsq3lkf2Au5cOhHQ8hyRk8Tbr4yRnWhrZJ3IBRnrtRo1R6Fqj-Jc62G3k5MAzPkVv6vY8OFzTAe8XujCZYzeWyeSoeXsO2ACDOim-cCbUbw2CSq1NoYgg0J68vn9qr52Pv_gQ8oLX_kXIg5nbbm2PbU25q7gW0Xgz1jqSP4_opE7vB0Ty6ZO0SwmdKFTlxXrziUxxjwZGcGGq63J2xFx9N4iRrdpeZ-vKQT0AXNt_WayYXKakfzOzQ2QnxrdvzWKtKcJAO4rscRF62rGLZnjb5TkCE5diFKUehIeFUdCTHKASywl8QgQJyAnRQlA13iGsdhCZaLwtaYoeCkXDW2sfuV5gY-k7vED61KwMO8Qfj8Rsy_sKLeDWo85PK7IUmmzMUEEzPd_7rgNcbYvh5V7XmjdQL5f54hOHsPtJBbOXWvy6oq-DeKvB-IvbVyFwigRgFOO7izoPOVzcU90XNxBjy2X8QgSff9-ahjG4fIDgS6B8PAsf--xzYl6kxliaVGAiblyWRMDGP7MaRNDmfJczJ97BTIiy-9JOfA7jzwH0V_Vzl7daPuFasZhVFh6CV4BeSO2pUM9zMlIs92ngPznP8XEzKMgRKU-nsug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YOUR_ACCESS_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/users/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 17:47:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"User retrieved successfully.\",\n    \"data\": {\n        \"user\": {\n            \"id\": 3,\n            \"first_name\": \"Hentry\",\n            \"last_name\": \"Fryzen\",\n            \"email\": \"hentryfryzen@example.com\",\n            \"password\": \"$2y$12$SBeb56dDJ6CQvMg7bHqh..UQ50z.3z2o6s.adHAbFRFHccHQKaH7u\",\n            \"remember_token\": null,\n            \"created_at\": null,\n            \"updated_at\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login ",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"hentryfryzen@example.com\",\n  \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"hentryfryzen@example.com\",\n  \"password\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 20:24:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Login successful.\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ4NmI4ZS1iNDZjLTRhOTEtYjIzOS05MTQwMzM5NTdhMGIiLCJqdGkiOiJiYWZkMzdjYTFjN2QwY2YxOThkYzUxZmJlZmRiNDE5MDJkYjUyMzRmYWRkYzQxNzEwMWQ4MzA1ZWE4NjhhYWNhNzI1YjBmMDJmYmEzNjg0MyIsImlhdCI6MTc0MDM0MjI4OS4xMDU5OTIsIm5iZiI6MTc0MDM0MjI4OS4xMDU5OTIsImV4cCI6MTc3MTg3ODI4OS4xMDQ4MzYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.uhN1e_DQAwsNeXqERoi1_ovQ6RN8UoBrFnnMAGAIuimdvM3Q2rqsiyWOeT15PrW5GEaMOqJLintDxXq9rhRMokBykyvb5dCDpod2zkdin-1IxdUuGGXyokRf-ieSQ9f_X4pFZkgSGm7ZunSo8ToB962RWo519lFX_MwTVJqYLYKZhFi6Jt87_9TdwyHvrIwQehbeZpsJGEKnIJ4C_CPabpZtGX1bo7tVcBTIH5JmsGkiiHqDtXuA6bnJl_CibY8CI8Xjm6p5GNPEVCDA_wCQRyaVppiXv8v6Bf07bvurOAkbd46lYMze36HaGmkfx9LKaql5Mr9GUooXhR6FuYm3B_QdXFJR1Vciko9ji5dvcbIor7JpEMZ5f-iPQ3fvtoMC046YgnLgAkiIuA75auEbC7Ovlt5GExbSCB1AwEpjk94OZCPLmPzbo6-Eon_tnKv6RznmiA7erZt1wdU9GYrz6vs5zA2BFei6ljxVfO8J6PWEbXQV018YYABIcW3rdV8El29m4Deo9Zz2P57EFgVUCKr8Hh2kypXgg9vd9tAOqT-pIpT1ycbmIIxUSgNlCp1Dk864zfsgotj8ilTPTLB2qZvErmMakKl9J87PaFvgIq7tQWpm9mlqfHFQNNhL-nxjL6fFyGtlO-KPk9GoGmN4SSB4WgFfLo82LJXUlgxCZp8\"\n    }\n}"
+						},
+						{
+							"name": "Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"hentryfryzen@example.com\",\n  \"password\": \"passwsord\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 21:22:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Invalid credentials.\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiI4YzlkNDZlZGM2ZmQ2MWFhMDg4ZDkxNDVhMjQ0MTkyNDkwNTk1ODI3OWM0YzcyNGU4MTlmNThmZTUxOTJmNjg5ZTQ4MmI5ZDY5MzdmYjk3YSIsImlhdCI6MTc0MDQ3ODkyNi41MjI1ODQsIm5iZiI6MTc0MDQ3ODkyNi41MjI1ODUsImV4cCI6MTc3MjAxNDkyNi41MTU0ODIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.iipg8F9T8dPcPOQltMR1rNlYdpa7t5XdtQN6zeHgdH8_IVdG7Rvmta_eTiz1R0l1DnZSe9BeIRY-JDQSgbM5VRdWc7aq3zud71H5GbFn3p_5iGRYIPAPlE842tBReWD4xEe1JAdVmz9ixVUW2VKe0hieplDuEr8hAOmlSGA2p71Ba62X_ajHUOEPWIzrsrtI6Z-XpEY--V2-bKB9UbNL-U2QfhV_ZudswpCqss0tPo2XIffm44SDl4Oc7OzzBQKyxIMs0UldpTtvoKZprNLimhlYG75RKAQ8jrfCvg6xBk2tZpn_8gj_j6w9yxdpgXEOCfCoQCf3Rtl_OBU4L_r1T1sExQLj3Zj22LOHhEiA1bz1ARq5ONhqsMVztBC9A4LVRMSLEZ9kjn6HrtpioBT0oJeX7zWfw-4U7whMVl3uttqC7ekIPSTWlEih3Xlw8fcwtFhuu-arhwsylrbsEb8VwogTslo56072YZ1IrBGtnXQrMy9rrtGz4mjTXRxjz1aVeSE5GzkljGczvpg9M7Gb1HZrtzhql5YaeR8KFSx1fxFOKpuhc9UAXzWdWYwoQ0BnN2mI6oJeno_y6kyq6PAO0_pzJ2gtN593FZrHG3F8g79eVBtoC8HeRan5_RdDzI30ucmqqZKiEMwI00Lo8AlX4iu1_3e4tsXPJcm4TED_4pE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 10:57:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Logout successful.\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Projects Apis",
+			"item": [
+				{
+					"name": "create projects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ4YzdhNy03OGZkLTRlOGQtOWQ1Ny1jODYxMmMwNWQ1MjAiLCJqdGkiOiJhMDA2ZDQ1OGFiODQ5MDNiYzhiNjAzZWQ3ZGE0ZDBhODViOWM1YTNkMThhYTYwMDVlNGZhYmU0ZWQ2M2FjYjdhNTUzMWViYTA5ZjEyODU0OSIsImlhdCI6MTc0MDM4MTU1Ny4zNjA2NDUsIm5iZiI6MTc0MDM4MTU1Ny4zNjA2NDYsImV4cCI6MTc3MTkxNzU1Ny4zNTg0NDcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.s1RWosNH758_EztwnVX5OkcGYPjUC8A0a_vFCl-xiQx0XtAooMIOx49cI9x_f6T3-sz1sJ_1Yp42w52fUjb3vQP8bkb67hLE-JFiQxcAd-geY7cxhPY_uR2HmATP8jFDJuw0rU1d14vtivfucxhAx90ULx3LW_shk8w2QKt_IGX2z8Er9lzdqdN5_Z-9jMB94eToXVdPBG8hGyoKmTPPgKLBZiR4NJCKHP57R3HfZg9Q8TXNVxfa7ipyo8fVcjm3xIoy-r8XaX49JrfrcZUJsa8JBwp13RA9SLsYYATou5cARoj2znxB97-JASAcY64UgPQTVdJWJFDz_ty5gGHbI-d7sOSVC9eYsxHxS6NJYG9magmlBtGoP5Ownb1GMNaroLkXjuR83cD8Rap0zjo-jySdz-qu3MbW_mdXEGxuePIQZvr_h_A8jkeZ4a0XQVo6DxQ82arAgIdVoopvavwIfsgdH7_nhti2UMLC3rNkPJpigWOHC-tQitvUUAgZ5pQ4yI-jQRBl_XOzHdHd-s-Sr_zcWpffJLMO0kBnMECBwd28I61tz9aViE6gECneAr8GKsiBtTNFS4JjBBhHsxS7LLJQ9PqWDIVVHJOz-VZIjm1BCBktGCu9OpcWuRodxcpATMJoEsLYFxWP9SkjvkJ_c5UqjNxmIKLNaFYGRGnWbQ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"New GGH\",\n  \"status\": \"completed\",\n  \"attributes\": [\n    {\n      \"attribute_id\": 1,\n      \"value\": \"900\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"New Project\",\n  \"status\": \"completed\",\n  \"attributes\": [\n    {\n      \"attribute_id\": 1,\n      \"value\": \"Sample Value\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/projects",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 22:43:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Project created\",\n    \"data\": [\n        {\n            \"name\": \"New Project\",\n            \"status\": \"completed\",\n            \"updated_at\": \"2025-02-23T22:43:21.000000Z\",\n            \"created_at\": \"2025-02-23T22:43:21.000000Z\",\n            \"id\": 7,\n            \"attribute_values\": [\n                {\n                    \"id\": 13,\n                    \"attribute_id\": 1,\n                    \"project_id\": 1,\n                    \"entity_type\": \"0\",\n                    \"entity_id\": 7,\n                    \"value\": \"Sample Value\",\n                    \"created_at\": \"2025-02-23T22:43:21.000000Z\",\n                    \"updated_at\": \"2025-02-23T22:43:21.000000Z\",\n                    \"attribute\": {\n                        \"id\": 1,\n                        \"name\": \"department\",\n                        \"type\": \"select\",\n                        \"created_at\": \"2025-02-24T01:47:01.000000Z\",\n                        \"updated_at\": \"2025-02-24T01:47:01.000000Z\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"New GGH\",\n  \"status\": \"completed\",\n  \"attributes\": [\n    {\n      \"attribute_id\": 1,\n      \"value\": \"900\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/projects",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:14:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 422,\n    \"message\": \"Invalid data provided. Please check your input and try again.\",\n    \"data\": {\n        \"errors\": {\n            \"name\": [\n                \"The name has already been taken.\"\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Projects ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ4YzdhNy03OGZkLTRlOGQtOWQ1Ny1jODYxMmMwNWQ1MjAiLCJqdGkiOiJhMDA2ZDQ1OGFiODQ5MDNiYzhiNjAzZWQ3ZGE0ZDBhODViOWM1YTNkMThhYTYwMDVlNGZhYmU0ZWQ2M2FjYjdhNTUzMWViYTA5ZjEyODU0OSIsImlhdCI6MTc0MDM4MTU1Ny4zNjA2NDUsIm5iZiI6MTc0MDM4MTU1Ny4zNjA2NDYsImV4cCI6MTc3MTkxNzU1Ny4zNTg0NDcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.s1RWosNH758_EztwnVX5OkcGYPjUC8A0a_vFCl-xiQx0XtAooMIOx49cI9x_f6T3-sz1sJ_1Yp42w52fUjb3vQP8bkb67hLE-JFiQxcAd-geY7cxhPY_uR2HmATP8jFDJuw0rU1d14vtivfucxhAx90ULx3LW_shk8w2QKt_IGX2z8Er9lzdqdN5_Z-9jMB94eToXVdPBG8hGyoKmTPPgKLBZiR4NJCKHP57R3HfZg9Q8TXNVxfa7ipyo8fVcjm3xIoy-r8XaX49JrfrcZUJsa8JBwp13RA9SLsYYATou5cARoj2znxB97-JASAcY64UgPQTVdJWJFDz_ty5gGHbI-d7sOSVC9eYsxHxS6NJYG9magmlBtGoP5Ownb1GMNaroLkXjuR83cD8Rap0zjo-jySdz-qu3MbW_mdXEGxuePIQZvr_h_A8jkeZ4a0XQVo6DxQ82arAgIdVoopvavwIfsgdH7_nhti2UMLC3rNkPJpigWOHC-tQitvUUAgZ5pQ4yI-jQRBl_XOzHdHd-s-Sr_zcWpffJLMO0kBnMECBwd28I61tz9aViE6gECneAr8GKsiBtTNFS4JjBBhHsxS7LLJQ9PqWDIVVHJOz-VZIjm1BCBktGCu9OpcWuRodxcpATMJoEsLYFxWP9SkjvkJ_c5UqjNxmIKLNaFYGRGnWbQ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {access_token}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {access_token}"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/projects",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:16:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Projects fetched\",\n    \"data\": {\n        \"projects\": [\n            {\n                \"id\": 1,\n                \"name\": \"Project Apollo\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-23T23:44:04.000000Z\",\n                \"updated_at\": \"2025-02-23T23:44:04.000000Z\",\n                \"attribute_values\": []\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Project Orion\",\n                \"status\": \"completed\",\n                \"created_at\": \"2025-02-23T23:44:04.000000Z\",\n                \"updated_at\": \"2025-02-23T23:44:04.000000Z\",\n                \"attribute_values\": []\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Project Gemini\",\n                \"status\": \"pending\",\n                \"created_at\": \"2025-02-23T23:44:04.000000Z\",\n                \"updated_at\": \"2025-02-23T23:44:04.000000Z\",\n                \"attribute_values\": []\n            },\n            {\n                \"id\": 12,\n                \"name\": \"News Bo\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-23T23:51:28.000000Z\",\n                \"updated_at\": \"2025-02-23T23:51:28.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 9,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 12,\n                        \"value\": \"6000\",\n                        \"created_at\": \"2025-02-23T23:51:28.000000Z\",\n                        \"updated_at\": \"2025-02-23T23:51:28.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": null,\n                            \"updated_at\": null\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 13,\n                \"name\": \"Project A\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-23T23:51:45.000000Z\",\n                \"updated_at\": \"2025-02-23T23:51:45.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 10,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 13,\n                        \"value\": \"6000\",\n                        \"created_at\": \"2025-02-23T23:51:45.000000Z\",\n                        \"updated_at\": \"2025-02-23T23:51:45.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": null,\n                            \"updated_at\": null\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Project B\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-23T23:57:56.000000Z\",\n                \"updated_at\": \"2025-02-23T23:57:56.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 11,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 14,\n                        \"value\": \"6000\",\n                        \"created_at\": \"2025-02-23T23:57:56.000000Z\",\n                        \"updated_at\": \"2025-02-23T23:57:56.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": null,\n                            \"updated_at\": null\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Project C\",\n                \"status\": \"completed\",\n                \"created_at\": \"2025-02-24T07:19:47.000000Z\",\n                \"updated_at\": \"2025-02-24T07:19:47.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 12,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 15,\n                        \"value\": \"Sample Value\",\n                        \"created_at\": \"2025-02-24T07:19:47.000000Z\",\n                        \"updated_at\": \"2025-02-24T07:19:47.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": null,\n                            \"updated_at\": null\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 16,\n                \"name\": \"Project D\",\n                \"status\": \"completed\",\n                \"created_at\": \"2025-02-24T07:47:44.000000Z\",\n                \"updated_at\": \"2025-02-24T07:47:44.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 13,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 16,\n                        \"value\": \"Sample Value\",\n                        \"created_at\": \"2025-02-24T07:47:44.000000Z\",\n                        \"updated_at\": \"2025-02-24T07:47:44.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": null,\n                            \"updated_at\": null\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 17,\n                \"name\": \"Project E\",\n                \"status\": \"completed\",\n                \"created_at\": \"2025-02-24T08:13:13.000000Z\",\n                \"updated_at\": \"2025-02-24T08:13:13.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 14,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 17,\n                        \"value\": \"Sample Value\",\n                        \"created_at\": \"2025-02-24T08:13:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T08:13:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": null,\n                            \"updated_at\": null\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 18,\n                \"name\": \"Project F\",\n                \"status\": \"completed\",\n                \"created_at\": \"2025-02-24T08:13:31.000000Z\",\n                \"updated_at\": \"2025-02-24T08:13:31.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 15,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 18,\n                        \"value\": \"900\",\n                        \"created_at\": \"2025-02-24T08:13:31.000000Z\",\n                        \"updated_at\": \"2025-02-24T08:13:31.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": null,\n                            \"updated_at\": null\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Project By ID ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiJhMzAzNDQ5OTc3NDczMDI4YWUzZTdlZWFlYzVmZDA5NGMxYzYzMmMwMGMyMTRjYWNkZDJkMjBhZjEwYWEyMDQzNTljNzk3OTdmM2UwMzdiZiIsImlhdCI6MTc0MDQ2MjU0OS44NzA5MTMsIm5iZiI6MTc0MDQ2MjU0OS44NzA5MTMsImV4cCI6MTc3MTk5ODU0OS44NjAzNzEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.N1F3n1NIdlY-RYZtMVC2UAm0t9bFQK_UBxc1eex3jnksjFI3q92tcvXvdnDUZXAY_J4GHroNgQZn-SdFh0SCcjK8Kn-qKBmkvriE_KXSzReQsQf8G7xwB7dTlsAn380PVExnYanFZFoTiQCIeoho9NSJO8F8-SYjdzi5vSALPUrpzSl7uGd522wMRzLgwmWH-AKs6leUne-LXW-0FHBwyxeXXperQlFXZQwtPcs4ogbbNJiuyzLorsO3JEQqKTkiuVTlFzY2JDs3HNawF5aT486ES3mED0YIEj9gKMIejchELqa-XcpJHE8M34H8N0IB367v38cNFchUwMT6I8zu8qKxRXy79LfdWoYUjRjXztnPx0arlmTpvcxxs9Va4OyNq--__KDfUePaeoKyg0KjKs1iiCYf6o4lsGZoYqQjRODd-fzuplJwglkYpqMFWIUtXwLfgZ04_vbOWMP03SBsf2lDbqBSkT_6CUTWj1zoSyWu7WsBEFxtPQcWse40_9c9zxvdhiCUmyVacrW5N9P1ZP5Xw1viOynKh1J_WdeW6QLqTUya29uqBryNXzbCAWBU7Xw-ZGWpT-DguvnqGEXF-BLV72SC95y7BwyKXuIXFG98so1PXSedHDrhZC166PMc0LNfwszfZqDyy82EZEcBOVqeQ7aKQzrQbw_jyq2tunU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YOUR_ACCESS_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/projects/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/projects/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:19:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Project details\",\n    \"data\": [\n        {\n            \"id\": 14,\n            \"name\": \"Project B\",\n            \"status\": \"in_progress\",\n            \"created_at\": \"2025-02-23T23:57:56.000000Z\",\n            \"updated_at\": \"2025-02-23T23:57:56.000000Z\",\n            \"attribute_values\": [\n                {\n                    \"id\": 11,\n                    \"attribute_id\": 2,\n                    \"entity_id\": 14,\n                    \"value\": \"6000\",\n                    \"created_at\": \"2025-02-23T23:57:56.000000Z\",\n                    \"updated_at\": \"2025-02-23T23:57:56.000000Z\",\n                    \"attribute\": {\n                        \"id\": 2,\n                        \"name\": \"start_date\",\n                        \"type\": \"date\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Error Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_ACCESS_TOKEN"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/projects/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects",
+										"11"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:20:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Project not found\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Project Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiJhMzAzNDQ5OTc3NDczMDI4YWUzZTdlZWFlYzVmZDA5NGMxYzYzMmMwMGMyMTRjYWNkZDJkMjBhZjEwYWEyMDQzNTljNzk3OTdmM2UwMzdiZiIsImlhdCI6MTc0MDQ2MjU0OS44NzA5MTMsIm5iZiI6MTc0MDQ2MjU0OS44NzA5MTMsImV4cCI6MTc3MTk5ODU0OS44NjAzNzEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.N1F3n1NIdlY-RYZtMVC2UAm0t9bFQK_UBxc1eex3jnksjFI3q92tcvXvdnDUZXAY_J4GHroNgQZn-SdFh0SCcjK8Kn-qKBmkvriE_KXSzReQsQf8G7xwB7dTlsAn380PVExnYanFZFoTiQCIeoho9NSJO8F8-SYjdzi5vSALPUrpzSl7uGd522wMRzLgwmWH-AKs6leUne-LXW-0FHBwyxeXXperQlFXZQwtPcs4ogbbNJiuyzLorsO3JEQqKTkiuVTlFzY2JDs3HNawF5aT486ES3mED0YIEj9gKMIejchELqa-XcpJHE8M34H8N0IB367v38cNFchUwMT6I8zu8qKxRXy79LfdWoYUjRjXztnPx0arlmTpvcxxs9Va4OyNq--__KDfUePaeoKyg0KjKs1iiCYf6o4lsGZoYqQjRODd-fzuplJwglkYpqMFWIUtXwLfgZ04_vbOWMP03SBsf2lDbqBSkT_6CUTWj1zoSyWu7WsBEFxtPQcWse40_9c9zxvdhiCUmyVacrW5N9P1ZP5Xw1viOynKh1J_WdeW6QLqTUya29uqBryNXzbCAWBU7Xw-ZGWpT-DguvnqGEXF-BLV72SC95y7BwyKXuIXFG98so1PXSedHDrhZC166PMc0LNfwszfZqDyy82EZEcBOVqeQ7aKQzrQbw_jyq2tunU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer your_token"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"GHC A\",\n    \"status\": \"in_progress\",\n    \"attributes\": [\n      {\n        \"attribute_id\": 1,\n        \"value\": \"1900\"\n      }\n    ]\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/projects/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Reponse",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer your_token"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Updated Project Name\",\n    \"status\": \"pending\",\n    \"attributes\": [\n      {\n        \"attribute_id\": 1,\n        \"value\": \"100\"\n      },\n      {\n        \"attribute_id\": 2,\n        \"value\": \"200\"\n      }\n    ]\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/projects/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:28:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Project updated successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Updated Project Name\",\n            \"status\": \"pending\",\n            \"created_at\": \"2025-02-23T23:44:04.000000Z\",\n            \"updated_at\": \"2025-02-24T08:28:19.000000Z\",\n            \"attribute_values\": [\n                {\n                    \"id\": 16,\n                    \"attribute_id\": 1,\n                    \"entity_id\": 1,\n                    \"value\": \"100\",\n                    \"created_at\": \"2025-02-24T08:28:19.000000Z\",\n                    \"updated_at\": \"2025-02-24T08:28:19.000000Z\",\n                    \"attribute\": {\n                        \"id\": 1,\n                        \"name\": \"department\",\n                        \"type\": \"text\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    }\n                },\n                {\n                    \"id\": 17,\n                    \"attribute_id\": 2,\n                    \"entity_id\": 1,\n                    \"value\": \"200\",\n                    \"created_at\": \"2025-02-24T08:28:19.000000Z\",\n                    \"updated_at\": \"2025-02-24T08:28:19.000000Z\",\n                    \"attribute\": {\n                        \"id\": 2,\n                        \"name\": \"start_date\",\n                        \"type\": \"date\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Error Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer your_token"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Project Orion\",\n    \"status\": \"pending\",\n    \"attributes\": [\n      {\n        \"attribute_id\": 1,\n        \"value\": \"100\"\n      },\n      {\n        \"attribute_id\": 2,\n        \"value\": \"200\"\n      }\n    ]\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/projects/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects",
+										"1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:34:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 500,\n    \"message\": \"An unexpected error occurred. Please try again later.\",\n    \"data\": {\n        \"error\": \"The name has already been taken.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "assign User To Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5OGQ4ZC02NTUxLTRkNjktOWE2Mi0yZDRmYjU5YTc0MWYiLCJqdGkiOiIwNjA4MDljNGI1YmFkNTMyMzg2YTA0NDM2YWIzZTdkMzBlYzEyZTI0OTU3OGY4NzI5NDkxMzljY2IwZTg1MWNiM2FjYTY0MjgyMTUwOTkwZSIsImlhdCI6MTc0MDM4NzQ1Ny4zOTA2NiwibmJmIjoxNzQwMzg3NDU3LjM5MDY2MSwiZXhwIjoxNzcxOTIzNDU3LjM4OTUxNywic3ViIjoiMSIsInNjb3BlcyI6W119.Q9ilBqr1QXR7qIki1v-Q9rt3zmCEDZ7VlQqkMRViw-LO0vSMzhPv6m8asFbujZYfNqXPLM1KQL09_xYmMa3zA7F8EA5P4lYUa1Yq5dGqIqpkX3zWhI3JVzaPjXD-4_jYon3ZJ5ImDnVvwmPdEk6C6-wOtUivL5XZVOgoW5vBN2xGdnSkEtNk_YT4Ortsqyd-q9v3t3rK-RNU6hoBwVlQAeX3u1o6W7l48vEQkFxKL7jgID3IL3OhvtZAbG4SQiqbNw-wD30_hk_OaGzQQqcExjzReD2oDDm68sHoZFfW9J19trpYgTdlFe4KHl8Z8WLLWdzAv636eAQfn7AKrfHf-kKTAevFKjpdmov1XwcAOaXaQ3cgd8sdVfNJ8r2B_wEXDK44zGFoNMUtWpVj3WeBhbrW8xRL3QZRXOImJLkVwyucLs_KcIPbNSxE7M8YpPJyHCMK7WBrQWEmKyc5LUrsgELLUpbif9BxXTYQZLnc_b8QdbAAlXpQRsD_EjT7fPMKPWFFg_JB8umDeataMd1zOUm_Qba5CiGMwhvGwqDGUA8HW-InOxOJm_XONc4yrjYZFlI4Z04gpuPzGvmTnim9CPcnP5IYn5BO380OMNETvkF9qDVH-fqeZGrZUeMNXVoAC_RLpQKugeGUOsEe4Kdgx3AWfcPQmAMqcCdv_WEGaZE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/projects/1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/projects/1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects",
+										"1",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 10:49:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User successfully assigned to the project.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"first_name\": \"Hentry\",\n            \"last_name\": \"Fryzen\",\n            \"email\": \"hentryfryzen@example.com\",\n            \"password\": \"$2y$12$pF3YhVEMSCFWa5fAqMYKbud8Zry5odNGg/jLEmKXuHv6aP4Q7wXN.\",\n            \"remember_token\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"pivot\": {\n                \"project_id\": 1,\n                \"user_id\": 1\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/projects/1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects",
+										"1",
+										"users"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 13:12:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 409,\n    \"message\": \"User is already assigned to this project.\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Filter By Status ( in_progress , pending , completed )",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiI1YjNlOWRkOTM1MzZiNTNjMWEwOGY2N2IyMGM4NGFiZDA0ZTE3ODJlMjdiMmYxMjNmYjRiZjE5MjM2MjA2ZmI4N2YwNjA2YzRiZGE3OWE4YiIsImlhdCI6MTc0MDQwNDUzMi42NDkzMzQsIm5iZiI6MTc0MDQwNDUzMi42NDkzMzQsImV4cCI6MTc3MTk0MDUzMi42NDcwNDYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.Ev9EFtHV_UKwmwYXfb7-311Qe1NWTc2dYxgkhZWGl1F07ttCRnydJ-dALxii4XfblfNxwH9tbdKFyP6VT6JJ19wormr5JAPshhPW1QIdvxOTzdZ0MBs7ZZZhA7m9WdCZe7oKvuEc7Kro2cUD1ZUet-GQ-4i6KDxJLPRyrUFf0coM-8dw6gor1ovpVaUZBxTPxCWoLUxU6BSqKyEx4vKCc0LRtXGS4eQGge5Jje4veuHhaRR4BeQLdSWQUTSruu7_Wo-5eK9ovnW-N-VeWuSKqiLGjFe4ZYIh1ziQdMc4o07i5qMKCT-4GlbrlPEjcvoVSOrrN9wz4GR111UbBVhBc7AqwqT5bdJk-PRzue06K2-6mXRhyt6pML_GXOYzUs-MbVKTfgE1sb__rfaBW7-a38Wwl13-CIbPExovPVEeHh1AUTIWysTK94kMxEamBj4zlkwxYxbC7h0ZwX__6id_gEvZ_1iXdoQeeFWuhI08Gyld03s8rSOx9vkyomE8aF8E10ZusabD3lRqET8pOjYcIkI_nZ4Nrsq0ZhlnkFXisF5px7Bfql9xBFA5GMd2zNaPyyk2pRuEejD6LiyS1yo9fPyj2BePyHYDoHFVjjVHlE6IXYpgCLcRVi80SmzQDJ0WdqRBEtDn-wb1_-DNwVtYD1OBa8goxRk-FYZZLdaaUfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projects?filters[status]=in_progress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filters[status]",
+									"value": "in_progress"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/projects?filters[status]=in_progress",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									],
+									"query": [
+										{
+											"key": "filters[status]",
+											"value": "in_progress"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 13:59:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Projects fetched\",\n    \"data\": {\n        \"projects\": [\n            {\n                \"id\": 1,\n                \"name\": \"ProjectA\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 1,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 1,\n                        \"value\": \"IT\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-01-01\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 3,\n                        \"attribute_id\": 3,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-12-31\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 3,\n                            \"name\": \"end_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Filter by Multiple Attributes (name LIKE Project, department = IT)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiI1YjNlOWRkOTM1MzZiNTNjMWEwOGY2N2IyMGM4NGFiZDA0ZTE3ODJlMjdiMmYxMjNmYjRiZjE5MjM2MjA2ZmI4N2YwNjA2YzRiZGE3OWE4YiIsImlhdCI6MTc0MDQwNDUzMi42NDkzMzQsIm5iZiI6MTc0MDQwNDUzMi42NDkzMzQsImV4cCI6MTc3MTk0MDUzMi42NDcwNDYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.Ev9EFtHV_UKwmwYXfb7-311Qe1NWTc2dYxgkhZWGl1F07ttCRnydJ-dALxii4XfblfNxwH9tbdKFyP6VT6JJ19wormr5JAPshhPW1QIdvxOTzdZ0MBs7ZZZhA7m9WdCZe7oKvuEc7Kro2cUD1ZUet-GQ-4i6KDxJLPRyrUFf0coM-8dw6gor1ovpVaUZBxTPxCWoLUxU6BSqKyEx4vKCc0LRtXGS4eQGge5Jje4veuHhaRR4BeQLdSWQUTSruu7_Wo-5eK9ovnW-N-VeWuSKqiLGjFe4ZYIh1ziQdMc4o07i5qMKCT-4GlbrlPEjcvoVSOrrN9wz4GR111UbBVhBc7AqwqT5bdJk-PRzue06K2-6mXRhyt6pML_GXOYzUs-MbVKTfgE1sb__rfaBW7-a38Wwl13-CIbPExovPVEeHh1AUTIWysTK94kMxEamBj4zlkwxYxbC7h0ZwX__6id_gEvZ_1iXdoQeeFWuhI08Gyld03s8rSOx9vkyomE8aF8E10ZusabD3lRqET8pOjYcIkI_nZ4Nrsq0ZhlnkFXisF5px7Bfql9xBFA5GMd2zNaPyyk2pRuEejD6LiyS1yo9fPyj2BePyHYDoHFVjjVHlE6IXYpgCLcRVi80SmzQDJ0WdqRBEtDn-wb1_-DNwVtYD1OBa8goxRk-FYZZLdaaUfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projects?filters[name]=ProjectA&filters[department]=IT&operators[name]=LIKE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filters[name]",
+									"value": "ProjectA"
+								},
+								{
+									"key": "filters[department]",
+									"value": "IT"
+								},
+								{
+									"key": "operators[name]",
+									"value": "LIKE"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/projects?filters[name]=ProjectA&filters[department]=IT&operators[name]=LIKE",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									],
+									"query": [
+										{
+											"key": "filters[name]",
+											"value": "ProjectA"
+										},
+										{
+											"key": "filters[department]",
+											"value": "IT"
+										},
+										{
+											"key": "operators[name]",
+											"value": "LIKE"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 13:49:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Projects fetched\",\n    \"data\": {\n        \"projects\": [\n            {\n                \"id\": 1,\n                \"name\": \"ProjectA\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 1,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 1,\n                        \"value\": \"IT\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-01-01\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 3,\n                        \"attribute_id\": 3,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-12-31\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 3,\n                            \"name\": \"end_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Projects (Filter with Operators)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiI1YjNlOWRkOTM1MzZiNTNjMWEwOGY2N2IyMGM4NGFiZDA0ZTE3ODJlMjdiMmYxMjNmYjRiZjE5MjM2MjA2ZmI4N2YwNjA2YzRiZGE3OWE4YiIsImlhdCI6MTc0MDQwNDUzMi42NDkzMzQsIm5iZiI6MTc0MDQwNDUzMi42NDkzMzQsImV4cCI6MTc3MTk0MDUzMi42NDcwNDYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.Ev9EFtHV_UKwmwYXfb7-311Qe1NWTc2dYxgkhZWGl1F07ttCRnydJ-dALxii4XfblfNxwH9tbdKFyP6VT6JJ19wormr5JAPshhPW1QIdvxOTzdZ0MBs7ZZZhA7m9WdCZe7oKvuEc7Kro2cUD1ZUet-GQ-4i6KDxJLPRyrUFf0coM-8dw6gor1ovpVaUZBxTPxCWoLUxU6BSqKyEx4vKCc0LRtXGS4eQGge5Jje4veuHhaRR4BeQLdSWQUTSruu7_Wo-5eK9ovnW-N-VeWuSKqiLGjFe4ZYIh1ziQdMc4o07i5qMKCT-4GlbrlPEjcvoVSOrrN9wz4GR111UbBVhBc7AqwqT5bdJk-PRzue06K2-6mXRhyt6pML_GXOYzUs-MbVKTfgE1sb__rfaBW7-a38Wwl13-CIbPExovPVEeHh1AUTIWysTK94kMxEamBj4zlkwxYxbC7h0ZwX__6id_gEvZ_1iXdoQeeFWuhI08Gyld03s8rSOx9vkyomE8aF8E10ZusabD3lRqET8pOjYcIkI_nZ4Nrsq0ZhlnkFXisF5px7Bfql9xBFA5GMd2zNaPyyk2pRuEejD6LiyS1yo9fPyj2BePyHYDoHFVjjVHlE6IXYpgCLcRVi80SmzQDJ0WdqRBEtDn-wb1_-DNwVtYD1OBa8goxRk-FYZZLdaaUfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projects?filters[start_date]=2024-01-01&operators[start_date]=>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filters[start_date]",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "operators[start_date]",
+									"value": ">"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/projects?filters[start_date]=2024-01-01&operators[start_date]=>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									],
+									"query": [
+										{
+											"key": "filters[start_date]",
+											"value": "2024-01-01"
+										},
+										{
+											"key": "operators[start_date]",
+											"value": ">"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 13:59:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Projects fetched\",\n    \"data\": {\n        \"projects\": [\n            {\n                \"id\": 1,\n                \"name\": \"ProjectA\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 1,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 1,\n                        \"value\": \"IT\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-01-01\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 3,\n                        \"attribute_id\": 3,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-12-31\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 3,\n                            \"name\": \"end_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Projects (Filter by Department)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiI1YjNlOWRkOTM1MzZiNTNjMWEwOGY2N2IyMGM4NGFiZDA0ZTE3ODJlMjdiMmYxMjNmYjRiZjE5MjM2MjA2ZmI4N2YwNjA2YzRiZGE3OWE4YiIsImlhdCI6MTc0MDQwNDUzMi42NDkzMzQsIm5iZiI6MTc0MDQwNDUzMi42NDkzMzQsImV4cCI6MTc3MTk0MDUzMi42NDcwNDYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.Ev9EFtHV_UKwmwYXfb7-311Qe1NWTc2dYxgkhZWGl1F07ttCRnydJ-dALxii4XfblfNxwH9tbdKFyP6VT6JJ19wormr5JAPshhPW1QIdvxOTzdZ0MBs7ZZZhA7m9WdCZe7oKvuEc7Kro2cUD1ZUet-GQ-4i6KDxJLPRyrUFf0coM-8dw6gor1ovpVaUZBxTPxCWoLUxU6BSqKyEx4vKCc0LRtXGS4eQGge5Jje4veuHhaRR4BeQLdSWQUTSruu7_Wo-5eK9ovnW-N-VeWuSKqiLGjFe4ZYIh1ziQdMc4o07i5qMKCT-4GlbrlPEjcvoVSOrrN9wz4GR111UbBVhBc7AqwqT5bdJk-PRzue06K2-6mXRhyt6pML_GXOYzUs-MbVKTfgE1sb__rfaBW7-a38Wwl13-CIbPExovPVEeHh1AUTIWysTK94kMxEamBj4zlkwxYxbC7h0ZwX__6id_gEvZ_1iXdoQeeFWuhI08Gyld03s8rSOx9vkyomE8aF8E10ZusabD3lRqET8pOjYcIkI_nZ4Nrsq0ZhlnkFXisF5px7Bfql9xBFA5GMd2zNaPyyk2pRuEejD6LiyS1yo9fPyj2BePyHYDoHFVjjVHlE6IXYpgCLcRVi80SmzQDJ0WdqRBEtDn-wb1_-DNwVtYD1OBa8goxRk-FYZZLdaaUfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projects?filters[department]=IT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filters[department]",
+									"value": "IT"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/projects?filters[department]=IT",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									],
+									"query": [
+										{
+											"key": "filters[department]",
+											"value": "IT"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 13:58:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Projects fetched\",\n    \"data\": {\n        \"projects\": [\n            {\n                \"id\": 1,\n                \"name\": \"ProjectA\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 1,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 1,\n                        \"value\": \"IT\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-01-01\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 3,\n                        \"attribute_id\": 3,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-12-31\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 3,\n                            \"name\": \"end_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Projects (Filter by Name)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiI1YjNlOWRkOTM1MzZiNTNjMWEwOGY2N2IyMGM4NGFiZDA0ZTE3ODJlMjdiMmYxMjNmYjRiZjE5MjM2MjA2ZmI4N2YwNjA2YzRiZGE3OWE4YiIsImlhdCI6MTc0MDQwNDUzMi42NDkzMzQsIm5iZiI6MTc0MDQwNDUzMi42NDkzMzQsImV4cCI6MTc3MTk0MDUzMi42NDcwNDYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.Ev9EFtHV_UKwmwYXfb7-311Qe1NWTc2dYxgkhZWGl1F07ttCRnydJ-dALxii4XfblfNxwH9tbdKFyP6VT6JJ19wormr5JAPshhPW1QIdvxOTzdZ0MBs7ZZZhA7m9WdCZe7oKvuEc7Kro2cUD1ZUet-GQ-4i6KDxJLPRyrUFf0coM-8dw6gor1ovpVaUZBxTPxCWoLUxU6BSqKyEx4vKCc0LRtXGS4eQGge5Jje4veuHhaRR4BeQLdSWQUTSruu7_Wo-5eK9ovnW-N-VeWuSKqiLGjFe4ZYIh1ziQdMc4o07i5qMKCT-4GlbrlPEjcvoVSOrrN9wz4GR111UbBVhBc7AqwqT5bdJk-PRzue06K2-6mXRhyt6pML_GXOYzUs-MbVKTfgE1sb__rfaBW7-a38Wwl13-CIbPExovPVEeHh1AUTIWysTK94kMxEamBj4zlkwxYxbC7h0ZwX__6id_gEvZ_1iXdoQeeFWuhI08Gyld03s8rSOx9vkyomE8aF8E10ZusabD3lRqET8pOjYcIkI_nZ4Nrsq0ZhlnkFXisF5px7Bfql9xBFA5GMd2zNaPyyk2pRuEejD6LiyS1yo9fPyj2BePyHYDoHFVjjVHlE6IXYpgCLcRVi80SmzQDJ0WdqRBEtDn-wb1_-DNwVtYD1OBa8goxRk-FYZZLdaaUfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projects?filters[name]=ProjectA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filters[name]",
+									"value": "ProjectA"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/projects?filters[name]=ProjectA",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									],
+									"query": [
+										{
+											"key": "filters[name]",
+											"value": "ProjectA"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 13:43:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Projects fetched\",\n    \"data\": {\n        \"projects\": [\n            {\n                \"id\": 1,\n                \"name\": \"ProjectA\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 1,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 1,\n                        \"value\": \"IT\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-01-01\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 3,\n                        \"attribute_id\": 3,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-12-31\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 3,\n                            \"name\": \"end_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Projects (No Filter)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiI1YjNlOWRkOTM1MzZiNTNjMWEwOGY2N2IyMGM4NGFiZDA0ZTE3ODJlMjdiMmYxMjNmYjRiZjE5MjM2MjA2ZmI4N2YwNjA2YzRiZGE3OWE4YiIsImlhdCI6MTc0MDQwNDUzMi42NDkzMzQsIm5iZiI6MTc0MDQwNDUzMi42NDkzMzQsImV4cCI6MTc3MTk0MDUzMi42NDcwNDYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.Ev9EFtHV_UKwmwYXfb7-311Qe1NWTc2dYxgkhZWGl1F07ttCRnydJ-dALxii4XfblfNxwH9tbdKFyP6VT6JJ19wormr5JAPshhPW1QIdvxOTzdZ0MBs7ZZZhA7m9WdCZe7oKvuEc7Kro2cUD1ZUet-GQ-4i6KDxJLPRyrUFf0coM-8dw6gor1ovpVaUZBxTPxCWoLUxU6BSqKyEx4vKCc0LRtXGS4eQGge5Jje4veuHhaRR4BeQLdSWQUTSruu7_Wo-5eK9ovnW-N-VeWuSKqiLGjFe4ZYIh1ziQdMc4o07i5qMKCT-4GlbrlPEjcvoVSOrrN9wz4GR111UbBVhBc7AqwqT5bdJk-PRzue06K2-6mXRhyt6pML_GXOYzUs-MbVKTfgE1sb__rfaBW7-a38Wwl13-CIbPExovPVEeHh1AUTIWysTK94kMxEamBj4zlkwxYxbC7h0ZwX__6id_gEvZ_1iXdoQeeFWuhI08Gyld03s8rSOx9vkyomE8aF8E10ZusabD3lRqET8pOjYcIkI_nZ4Nrsq0ZhlnkFXisF5px7Bfql9xBFA5GMd2zNaPyyk2pRuEejD6LiyS1yo9fPyj2BePyHYDoHFVjjVHlE6IXYpgCLcRVi80SmzQDJ0WdqRBEtDn-wb1_-DNwVtYD1OBa8goxRk-FYZZLdaaUfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/projects",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 14:05:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Projects fetched\",\n    \"data\": {\n        \"projects\": [\n            {\n                \"id\": 1,\n                \"name\": \"ProjectA\",\n                \"status\": \"in_progress\",\n                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 1,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 1,\n                        \"value\": \"IT\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-01-01\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 3,\n                        \"attribute_id\": 3,\n                        \"entity_id\": 1,\n                        \"value\": \"2024-12-31\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 3,\n                            \"name\": \"end_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 2,\n                \"name\": \"ProjectB\",\n                \"status\": \"completed\",\n                \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                \"attribute_values\": [\n                    {\n                        \"id\": 4,\n                        \"attribute_id\": 1,\n                        \"entity_id\": 2,\n                        \"value\": \"HR\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 1,\n                            \"name\": \"department\",\n                            \"type\": \"text\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"attribute_id\": 2,\n                        \"entity_id\": 2,\n                        \"value\": \"2024-02-01\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 2,\n                            \"name\": \"start_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    },\n                    {\n                        \"id\": 6,\n                        \"attribute_id\": 3,\n                        \"entity_id\": 2,\n                        \"value\": \"2024-11-30\",\n                        \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"updated_at\": \"2025-02-24T13:39:13.000000Z\",\n                        \"attribute\": {\n                            \"id\": 3,\n                            \"name\": \"end_date\",\n                            \"type\": \"date\",\n                            \"created_at\": \"2025-02-24T13:39:13.000000Z\",\n                            \"updated_at\": \"2025-02-24T13:39:13.000000Z\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Attributes",
+			"item": [
+				{
+					"name": "Create attributes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiJhMzAzNDQ5OTc3NDczMDI4YWUzZTdlZWFlYzVmZDA5NGMxYzYzMmMwMGMyMTRjYWNkZDJkMjBhZjEwYWEyMDQzNTljNzk3OTdmM2UwMzdiZiIsImlhdCI6MTc0MDQ2MjU0OS44NzA5MTMsIm5iZiI6MTc0MDQ2MjU0OS44NzA5MTMsImV4cCI6MTc3MTk5ODU0OS44NjAzNzEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.N1F3n1NIdlY-RYZtMVC2UAm0t9bFQK_UBxc1eex3jnksjFI3q92tcvXvdnDUZXAY_J4GHroNgQZn-SdFh0SCcjK8Kn-qKBmkvriE_KXSzReQsQf8G7xwB7dTlsAn380PVExnYanFZFoTiQCIeoho9NSJO8F8-SYjdzi5vSALPUrpzSl7uGd522wMRzLgwmWH-AKs6leUne-LXW-0FHBwyxeXXperQlFXZQwtPcs4ogbbNJiuyzLorsO3JEQqKTkiuVTlFzY2JDs3HNawF5aT486ES3mED0YIEj9gKMIejchELqa-XcpJHE8M34H8N0IB367v38cNFchUwMT6I8zu8qKxRXy79LfdWoYUjRjXztnPx0arlmTpvcxxs9Va4OyNq--__KDfUePaeoKyg0KjKs1iiCYf6o4lsGZoYqQjRODd-fzuplJwglkYpqMFWIUtXwLfgZ04_vbOWMP03SBsf2lDbqBSkT_6CUTWj1zoSyWu7WsBEFxtPQcWse40_9c9zxvdhiCUmyVacrW5N9P1ZP5Xw1viOynKh1J_WdeW6QLqTUya29uqBryNXzbCAWBU7Xw-ZGWpT-DguvnqGEXF-BLV72SC95y7BwyKXuIXFG98so1PXSedHDrhZC166PMc0LNfwszfZqDyy82EZEcBOVqeQ7aKQzrQbw_jyq2tunU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"computer\",\n  \"type\": \"date\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/attributes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"attributes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"computer\",\n  \"type\": \"date\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/attributes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"attributes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:21:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Attribute created successfully.\",\n    \"data\": {\n        \"attribute\": {\n            \"name\": \"computer\",\n            \"type\": \"date\",\n            \"updated_at\": \"2025-02-25T06:21:59.000000Z\",\n            \"created_at\": \"2025-02-25T06:21:59.000000Z\",\n            \"id\": 4\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Assign Attribute Value to a Project (EAV Model):",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQ5ZjI1My1hNjI4LTQxYjAtOGRlMy0xYTkyNzM2ZWI3ZjMiLCJqdGkiOiJhMzAzNDQ5OTc3NDczMDI4YWUzZTdlZWFlYzVmZDA5NGMxYzYzMmMwMGMyMTRjYWNkZDJkMjBhZjEwYWEyMDQzNTljNzk3OTdmM2UwMzdiZiIsImlhdCI6MTc0MDQ2MjU0OS44NzA5MTMsIm5iZiI6MTc0MDQ2MjU0OS44NzA5MTMsImV4cCI6MTc3MTk5ODU0OS44NjAzNzEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.N1F3n1NIdlY-RYZtMVC2UAm0t9bFQK_UBxc1eex3jnksjFI3q92tcvXvdnDUZXAY_J4GHroNgQZn-SdFh0SCcjK8Kn-qKBmkvriE_KXSzReQsQf8G7xwB7dTlsAn380PVExnYanFZFoTiQCIeoho9NSJO8F8-SYjdzi5vSALPUrpzSl7uGd522wMRzLgwmWH-AKs6leUne-LXW-0FHBwyxeXXperQlFXZQwtPcs4ogbbNJiuyzLorsO3JEQqKTkiuVTlFzY2JDs3HNawF5aT486ES3mED0YIEj9gKMIejchELqa-XcpJHE8M34H8N0IB367v38cNFchUwMT6I8zu8qKxRXy79LfdWoYUjRjXztnPx0arlmTpvcxxs9Va4OyNq--__KDfUePaeoKyg0KjKs1iiCYf6o4lsGZoYqQjRODd-fzuplJwglkYpqMFWIUtXwLfgZ04_vbOWMP03SBsf2lDbqBSkT_6CUTWj1zoSyWu7WsBEFxtPQcWse40_9c9zxvdhiCUmyVacrW5N9P1ZP5Xw1viOynKh1J_WdeW6QLqTUya29uqBryNXzbCAWBU7Xw-ZGWpT-DguvnqGEXF-BLV72SC95y7BwyKXuIXFG98so1PXSedHDrhZC166PMc0LNfwszfZqDyy82EZEcBOVqeQ7aKQzrQbw_jyq2tunU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"attribute_id\": 2,\n  \"value\": \"2024-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/projects/4/attributes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"4",
+								"attributes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"attribute_id\": 2,\n  \"value\": \"2024-01-01\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/projects/4/attributes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects",
+										"4",
+										"attributes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 07:01:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Attribute value assigned successfully.\",\n    \"data\": {\n        \"project_id\": 4,\n        \"attribute\": \"start_date\",\n        \"value\": \"2024-01-01\"\n    }\n}"
+						},
+						{
+							"name": "Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"attribute_id\": 23,\n  \"value\": \"2024-01-01\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/projects/4/attributes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"projects",
+										"4",
+										"attributes"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 07:03:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 422,\n    \"message\": \"Validation Error\",\n    \"data\": {\n        \"attribute_id\": [\n            \"The selected attribute does not exist.\"\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
