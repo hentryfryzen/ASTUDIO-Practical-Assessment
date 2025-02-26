@@ -121,7 +121,7 @@ The project repository is available at:
 
 ---
 login credentials : 
-Username:hentryfryzen@gmail.com
+Username:hentryfryzen@example.com
 Password: password
 
 
