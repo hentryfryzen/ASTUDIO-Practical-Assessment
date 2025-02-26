@@ -120,6 +120,10 @@ The project repository is available at:
 🔗 [GitHub Repository](https://github.com/hentryfryzen/ASTUDIO-Practical-Assessment)
 
 ---
+login credentials : 
+Username:hentryfryzen@gmail.com
+Password: password
+
 
 ## Conclusion
 Your **Laravel 11 API** project with MySQL should now be up and running. If you encounter issues, double-check your `.env` configurations and ensure all required dependencies are installed. Happy developing! 🚀
